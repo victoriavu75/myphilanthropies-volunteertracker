@@ -1,0 +1,51 @@
+@font-face{
+    font-family: 'Montserrat', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+}
+/*
+mp_indigo: #57008B;
+mp_blue: #0053E2;
+mp_darkgrey: #707070;
+mp_yellow: #FFBF00;
+mp_lightgrey: #00000029;
+mp_lightpurple: #F6F3FD;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background: url(images/mountains.jpg);
+    background-size: cover;
+    max-width: auto;
+    height: 1080px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding: 3vw;
+}
+
+ul li{
+    list-style: none;
+    padding: 1vw;
+}
+
+ul{
+    display: flex;
+
+}
+
+#donate{
+    padding: 1vw;
+    background-color: #0053E2;
+    color: White;
+    font-size: 15px;
+    width: 80px;
+    text-align: center;
+}
