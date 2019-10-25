@@ -17,9 +17,9 @@ body{
 }
 
 #page{
-    max-width: 30vw;
+    max-width: 25vw;
     margin: auto;
-    padding-top: 18vh;
+    padding-top: 15vh;
 }
 
 #form-container{
@@ -31,5 +31,15 @@ body{
 
 #sign-header{
     font-family: 'Montserrat', sans-serif;
+}
+
+#redirect{
+    text-align: center;
+    margin: 5%;
+    color: white;
+}
+
+#redirect a{
+    color: white;
 }
 
