@@ -1,7 +1,8 @@
-@font-face{
+@font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+    src: url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap');
 }
+
 /*
 mp_indigo: #57008B;
 mp_blue: #0053E2;
@@ -11,35 +12,82 @@ mp_lightgrey: #00000029;
 mp_lightpurple: #F6F3FD;
 */
 
-body{
-    height: 100vh;
-    background-image: url('images/mountains.jpg')
+body {
+    height: auto;
+    background-image: linear-gradient(172deg, rgba(36, 0, 34, 0.3808411214953271) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%), url(images/mountains.jpg);
+    background-size: cover;
 }
 
-#page{
+/* CSS FOR THE NAV */
+nav {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding: 1.5vw;
+    letter-spacing: 2px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    padding: 1.5vw;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: .1vw;
+}
+
+a {
+    color: white;
+}
+
+
+#donate {
+    background-color: #0053E2;
+    color: white;
+    font-size: 1em;
+    padding: 20px;
+    line-height: 40px;
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    font-weight: 600;
+    transition: 1s ease-in-out;
+
+}
+
+#donate:hover {
+    background-color: #57008B;
+}
+
+#page {
     max-width: 25vw;
     margin: auto;
     padding-top: 15vh;
+    padding-bottom: 5vh;
+
 }
 
-#form-container{
+#form-container {
     background-color: white;
     padding: 10%;
     text-align: center;
     border-radius: 7%;
 }
 
-#sign-header{
+#sign-header {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 20;
 }
 
-#redirect{
+#redirect {
     text-align: center;
     margin: 5%;
     color: white;
 }
 
-#redirect a{
+#redirect a {
     color: white;
 }
-
