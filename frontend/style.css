@@ -69,8 +69,8 @@ a {
 }
 
 #page {
-    max-width: 25vw;
-    margin: auto;
+    /* max-width: 25vw; */
+    /* margin: auto; */
     padding-top: 15vh;
     padding-bottom: 5vh; 
 }
