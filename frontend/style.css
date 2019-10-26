@@ -67,7 +67,7 @@ a {
     margin: auto;
     padding-top: 15vh;
     padding-bottom: 5vh;
-
+    
 }
 
 #form-container {
@@ -75,6 +75,7 @@ a {
     padding: 10%;
     text-align: center;
     border-radius: 7%;
+    
 }
 
 #sign-header {
