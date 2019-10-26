@@ -3,10 +3,11 @@
 
 <head>
     <title>My Philanthropies - Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -19,31 +20,17 @@
         </ul>
         <div class="field">
             <div class="control">
-                <button class="button is-link is-fullwidth is-size-6"><b>DONATE</b></button>
+                <button class="button is-link is-fullwidth is-size-6"><b><a href="https://myphilanthropies.com/donate" target="_blank">DONATE</a></b></button>
             </div>
         </div>
     </nav>
     <div id="page">
-        <div class="button">
-            <btn class="button is-warning">Log In</btn>
-        </div>
-
-        <div id="form-container">
+        <form id="form-container">
             <img src="images/My-Philanthropies-Logo-3.1-Square.png" style="max-height: 70px;">
-            <!-- DOWNLOAD LIGHT MONTSERRAT FONT. -->
             <div class="content is-size-3 has-text-weight-light" id="sign-header">
                 Sign Up
             </div>
-            <div class="field">
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="text" placeholder="Username" value="">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
 
-                </div>
-                <!--<p class="help is-success">This username is available</p>-->
-            </div>
 
             <div class="field">
                 <div class="control has-icons-left has-icons-right">
@@ -56,7 +43,7 @@
             </div>
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password">
+                    <input class="input" type="password" placeholder="Password" value="">
                     <span class="icon is-small is-left">
                         <i class="fas fa-lock"></i>
                     </span>
@@ -64,19 +51,18 @@
             </div>
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Retype Password">
+                    <input class="input" type="password" placeholder="Retype Password" value="">
                     <span class="icon is-small is-left">
                         <i class="fas fa-lock"></i>
                     </span>
                 </p>
             </div>
-
             <div class="field">
                 <div class="control">
-                    <button class="button is-link is-fullwidth">Sign Up</button>
+                    <button class="button is-link is-fullwidth" type="submit">Sign Up</button>
                 </div>
             </div>
-        </div>
+        </form>
         <p id="redirect">Already a volunteer? <a href="login.html"><u><b>Click here to login</b></u></a></p>
     </div>
 </body></html>

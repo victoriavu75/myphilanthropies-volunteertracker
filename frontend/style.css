@@ -27,6 +27,10 @@ body {
     
 }
 
+.input{
+    background-color: #F6F3FD;
+}
+
 /* CSS FOR THE NAV */
 nav {
     display: flex;
