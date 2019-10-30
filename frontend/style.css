@@ -47,7 +47,11 @@ ul li {
 }
 
 a {
-    color: white;
+    color: #0053E2;
+}
+
+a:hover{
+    color: #0053E2;
 }
 
 
