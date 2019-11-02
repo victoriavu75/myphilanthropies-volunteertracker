@@ -1,0 +1,23 @@
+html { 
+    /* background: linear-gradient(172deg, rgba(253, 183, 250, 0.381) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%), url(images/mountains.jpg) no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+#form-container{
+    background-color: white;
+}
+
+#form-container #logo{
+    text-align: center;
+}
+
+#page {
+    /* max-width: 25vw; */
+    /* margin: auto; */
+    padding-top: 15vh;
+    padding-bottom: 5vh; 
+}
