@@ -5,12 +5,13 @@
     <title>My Philanthropies - Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="/images/My-Philanthropies-Logo-3.1-Square.png" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <!--Loading in the JavaScript-->
     <script src="signup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 
@@ -42,7 +43,7 @@
 
                     <div class="field">
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="E-mail" value="">
+                            <input class="input" type="email" placeholder="E-mail" name="username" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
@@ -51,23 +52,23 @@
                     </div>
                     <div class="field">
                         <p class="control has-icons-left">
-                            <input class="input" type="password" placeholder="Password" value="">
+                            <input class="input" type="password" placeholder="Password" name="password" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
                         </p>
                     </div>
-                    <div class="field">
+                    <!-- <div class="field">
                         <p class="control has-icons-left">
-                            <input class="input" type="password" placeholder="Retype Password" value="">
+                            <input class="input" type="password" placeholder="Retype Password" name="password" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
                         </p>
-                    </div>
+                    </div> -->
                     <div class="field">
                         <div class="control">
-                            <button class="button is-link is-fullwidth" type="submit">Sign Up</button>
+                            <button class="button is-link is-fullwidth" type="submit" onclick=sendEmail()>Sign Up</button>
                         </div>
                     </div>
                 </form>
@@ -76,4 +77,5 @@
         </div>
         <div class="column is-4-desktop is-3-tablet is-2-mobile"></div>
     </div>
+
 </body></html>
