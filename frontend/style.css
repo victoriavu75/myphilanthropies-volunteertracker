@@ -13,7 +13,7 @@ mp_lightpurple: #F6F3FD;
 */
 
 html { 
-        background: linear-gradient(172deg, rgba(36, 0, 34, 0.3808411214953271) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%), url(images/mountains.jpg) no-repeat center center fixed; 
+        /* background: linear-gradient(172deg, rgba(36, 0, 34, 0.3808411214953271) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%), url(images/mountains.jpg) no-repeat center center fixed;  */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
