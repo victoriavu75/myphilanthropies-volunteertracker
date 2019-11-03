@@ -12,16 +12,16 @@ mp_lightgrey: #00000029;
 mp_lightpurple: #F6F3FD;
 */
 
-html { 
-        background: url(images/mountains.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 100%;
-  }
+html {
+    background: url(images/mountains.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
 
-.input{
+.input {
     background-color: #F6F3FD;
 }
 
@@ -50,7 +50,7 @@ a {
     color: #0053E2;
 }
 
-a:hover{
+a:hover {
     color: #0053E2;
 }
 
@@ -77,7 +77,7 @@ a:hover{
     /* max-width: 25vw; */
     /* margin: auto; */
     padding-top: 15vh;
-    padding-bottom: 5vh; 
+    padding-bottom: 5vh;
 }
 
 #form-container {
@@ -102,4 +102,41 @@ a:hover{
 
 #redirect a {
     color: white;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    background: white;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 5px 25px 5px 0;
+    font-size: 14px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    /*add a content: "whatever u want"*/
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
 }
