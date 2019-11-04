@@ -107,6 +107,7 @@ a:hover {
 /* The message box is shown when the user clicks on the password field */
 #message {
     font-family: 'Montserrat', sans-serif;
+    text-align: left;
     display: none;
     background: white;
     color: #000;
