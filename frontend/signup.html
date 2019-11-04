@@ -52,7 +52,10 @@
                     </div>
                     <div class="field">
                         <p class="control has-icons-left">
-                            <input class="input" id="psw" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^\&*\)\(+=._-]).{8,}" placeholder="Password" name="password" value="" required>
+                            <!-- <input class="input" id="psw" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=[!@#$%\^&])\(+=._-]).{8,}" placeholder="Password" name="password" value="" required> -->
+                            <!-- <input class="input" id="psw" name="password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})" placeholder="Password" value="" required> -->
+                            <input class="input" id="psw" name="password" type="password"  placeholder="Password" value="" required>
+                            <!--pattern=“(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$%&()+,-./[\\\]^_]).{8,}”-->
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
@@ -68,14 +71,14 @@
                     </div>
 
                     <!--Have an input that makes sure it is the same as the previous before sending-->
-                    <div class="field">
+                    <!-- <div class="field">
                         <p class="control has-icons-left">
                             <input class="input" type="password" placeholder="Retype Password" name="password" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
                         </p>
-                    </div>
+                    </div> -->
                     <div class="field">
                         <div class="control">
                             <button class="button is-link is-fullwidth" type="submit" onclick=sendEmail()>Sign Up</button>
@@ -140,7 +143,7 @@
                 length.classList.add("invalid");
             }
             
-            var specials = /[!@#\$%\^\&*\)\(+=._-]/g;
+            var specials = /[!@#\$%\^&\*]/g;
             if (myInput.value.match(specials)) {
                 special.classList.remove("invalid");
                 special.classList.add("valid");
