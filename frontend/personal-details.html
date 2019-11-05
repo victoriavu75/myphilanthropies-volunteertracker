@@ -5,73 +5,147 @@
     <title>My Philanthropies - Personal Details</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <link href="forms.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="columns" id="page">
-        <div class="column is-4-desktop is-3-tablet is-2-mobile"></div>
-        <div class="column is-4-desktop is-6-tablet is-8-mobile" id="form-container">
-            <img id="logo" src="images/My-Philanthropies-Logo-3.1-Square.png" style="max-height: 100px;">
-            <div class="columns">
-                <div class="column is-one-third namerow">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="First" value="">
-                        </div>
+    <div class="card main-container">
+        <!-- <figure class="image image-is-centered is-64x64">
+            <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+        </figure> -->
+        <progress class="progress is-info is-small" value="30" max="90">30%</progress>
+        <div class="h1 is-size-2 has-text-centered">Personal Details</div>
+        <div class="columns">
+            <div class="column is-one-third namerow">
+                <div class="field">
+                    <label class="label">First Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="First" value="">
                     </div>
                 </div>
-                <div class="column is-one-third namerow">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Last" value="">
-                        </div>
+            </div>
+            <div class="column is-one-third namerow">
+                <div class="field">
+                    <label class="label">Last Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Last" value="">
                     </div>
                 </div>
-                <div class="column is-one-third namerow">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="MI" value="">
-                        </div>
+            </div>
+            <div class="column is-one-third namerow">
+                <div class="field">
+                    <label class="label">MI</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="MI" value="">
                     </div>
                 </div>
             </div>
 
-
-            <div class="field">
-                <label class="label">Age Range</label>
-                <div class="control has-icons-left has-icons-right">
-                    <!-- MODIFY RANGES -->
-                    <input id="sliderWithValue" class="slider is-fullwidth has-output" step="10" min="16" max="100" value="25" type="range">
-                    <output for="sliderWithValue"></output>
-                </div>
+        </div>
+        <div class="field">
+            <label class="label">Age Range</label>
+            <div class="control has-icons-left has-icons-right">
+                <input id="sliderWithValue" class="slider is-fullwidth has-output" step="10" min="16" max="100" value="25" type="range">
+                <output for="sliderWithValue"></output>
             </div>
+        </div>
 
-            <div class="field">
-                <label class="label">Employment Status</label>
-                <div class="buttons has-addons">
-                    <button class="button">Student</button>
-                    <button class="button is-info is-selected">Full-Time</button> <!-- on click, add is-info, is-selected for feedback purposes -->
-                    <button class="button">Part-Time</button>
-                    <button class="button">Unemployed</button>
-                </div>
+        <div class="field employment-status-buttons">
+            <label class="label">Employment Status</label>
+            <div class="buttons has-addons">
+                <button class="button is-info is-outlined">Student</button>
+                <button class="button is-info is-outlined">Full-Time</button>
+                <button class="button is-info is-outlined">Part-Time</button>
+                <button class="button is-info is-outlined">Unemployed</button>
             </div>
-
-            <div class="field">
+        </div>
+        <div>
+            <span class="field has-margin-right">
                 <input class="is-checkradio is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium">
                 <label for="exampleCheckboxMedium">Do you have reliable transportation?</label>
-            </div>
-
-            <div class="field">
+            </span>
+            <span class="field has-margin-right">
                 <input class="is-checkradio is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium">
                 <label for="exampleCheckboxMedium">Are you a licensed driver?</label>
+            </span>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column has-text-right">
+                <button class="button is-info">Next</button>
             </div>
         </div>
     </div>
-    <div class="column is-4-desktop is-3-tablet is-2-mobile"></div>
+
+    <!-- <div class="card">
+        <div class="columns">
+            <div class="column is-4-desktop is-6-tablet is-8-mobile">
+                <figure class="image image-is-centered is-128x128">
+                    <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+                </figure>
+                <div class="columns">
+                    <div class="column is-one-third namerow">
+                        <div class="field">
+                            <label class="label">First Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="First" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third namerow">
+                        <div class="field">
+                            <label class="label">Last Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Last" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third namerow">
+                        <div class="field">
+                            <label class="label">MI</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="MI" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">Age Range</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id="sliderWithValue" class="slider is-fullwidth has-output" step="10" min="16" max="100" value="25" type="range">
+                        <output for="sliderWithValue"></output>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Employment Status</label>
+                    <div class="buttons has-addons">
+                        <button class="button is-info is-outlined">Student</button>
+                        <button class="button is-info is-outlined">Full-Time</button>
+                        <button class="button is-info is-outlined">Part-Time</button>
+                        <button class="button is-info is-outlined">Unemployed</button>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input class="is-checkradio is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium">
+                    <label for="exampleCheckboxMedium">Do you have reliable transportation?</label>
+                </div>
+
+                <div class="field">
+                    <input class="is-checkradio is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium">
+                    <label for="exampleCheckboxMedium">Are you a licensed driver?</label>
+                </div>
+            </div>
+        </div>
+    <div class="column is-4-desktop is-3-tablet is-2-mobile"></div> -->
     <script>
         // Find output DOM associated to the DOM element passed as parameter
         function findOutputForSlider(element) {
