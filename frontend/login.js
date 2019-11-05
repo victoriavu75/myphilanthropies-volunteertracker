@@ -1,10 +1,11 @@
 function logIn()
 {
-    $('#form-container').on('submit', function(e){
+    $('#form-container').unbind().on('submit', function(e){
         e.preventDefault();
         var details = $('#form-container').serialize();
-        $.post('http://127.0.0.1:8000/idm/login', details, function(data){
+        $.post('http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/idm/login', details, function(data){
             console.log(data);
+            return;
         })
     })
 }
