@@ -1,23 +1,65 @@
 html { 
-    /* background: linear-gradient(172deg, rgba(253, 183, 250, 0.381) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%), url(images/mountains.jpg) no-repeat center center fixed;  */
+    /* linear-gradient(172deg, rgba(253, 183, 250, 0.381) 0%, rgba(106, 9, 121, 0.5677570093457944) 27%, rgba(0, 180, 255, 0.7663551401869159) 100%),  */
+    background: url(images/mountains.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+    -o-backzground-size: cover;
     background-size: cover;
     height: 100%;
 }
 
 #form-container{
-    background-color: white;
+    /* background-color: white; */
 }
 
 #form-container #logo{
-    text-align: center;
+    /* text-align: center; */
 }
 
 #page {
     /* max-width: 25vw; */
     /* margin: auto; */
-    padding-top: 15vh;
-    padding-bottom: 5vh; 
+    /* padding-top: 15vh;
+    padding-bottom: 5vh;  */
+}
+
+.has-margin-right {
+    margin-right: 2em;
+}
+
+.image-is-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.main-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    margin-bottom: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+.container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.select-multiple {
+    color: blue;
+}
+
+/* Type */
+.h1 {
+    margin-top: 0em;
+    margin-bottom: .25em;
 }
