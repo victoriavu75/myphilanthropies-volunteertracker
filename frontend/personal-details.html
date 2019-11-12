@@ -10,6 +10,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <link href="forms.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="personal-details.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2.0.0/dist/js/bulma-tagsinput.min.js"></script>
 </head>
 
 <body>
@@ -17,8 +22,9 @@
         <!-- <figure class="image image-is-centered is-64x64">
             <img src="images/My-Philanthropies-Logo-3.1-Square.png">
         </figure> -->
-        <progress class="progress is-info is-small" value="30" max="90">30%</progress>
+        <progress class="progress is-primary is-small" value="30" max="90">30%</progress>
         <div class="h1 is-size-2 has-text-centered">Personal Details</div>
+        <div class="is-divider"></div>
         <div class="columns">
             <div class="column is-one-third namerow">
                 <div class="field">
@@ -46,21 +52,14 @@
             </div>
 
         </div>
-        <div class="field">
-            <label class="label">Age Range</label>
-            <div class="control has-icons-left has-icons-right">
-                <input id="sliderWithValue" class="slider is-fullwidth has-output" step="10" min="16" max="100" value="25" type="range">
-                <output for="sliderWithValue"></output>
-            </div>
-        </div>
 
         <div class="field employment-status-buttons">
             <label class="label">Employment Status</label>
             <div class="buttons has-addons">
-                <button class="button is-info is-outlined">Student</button>
-                <button class="button is-info is-outlined">Full-Time</button>
-                <button class="button is-info is-outlined">Part-Time</button>
-                <button class="button is-info is-outlined">Unemployed</button>
+                <button class="button select-multiple">Student</button>
+                <button class="button select-multiple">Full-Time</button>
+                <button class="button select-multiple">Part-Time</button>
+                <button class="button select-multiple">Unemployed</button>
             </div>
         </div>
         <div>
@@ -80,6 +79,9 @@
                 <button class="button is-info">Next</button>
             </div>
         </div>
+        <input class="input" type="tags" placeholder="Add Tag" value="Tag1,Tag2,Tag3">
+        <input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
+
     </div>
 
     <!-- <div class="card">
@@ -147,76 +149,9 @@
         </div>
     <div class="column is-4-desktop is-3-tablet is-2-mobile"></div> -->
     <script>
+        bulmaTagsinput.attach();
+
         // Find output DOM associated to the DOM element passed as parameter
-        function findOutputForSlider(element) {
-            var idVal = element.id;
-            outputs = document.getElementsByTagName('output');
-            for (var i = 0; i < outputs.length; i++) {
-                if (outputs[i].htmlFor == idVal)
-                    return outputs[i];
-            }
-        }
 
-        function getSliderOutputPosition(slider) {
-            // Update output position
-            var newPlace,
-                minValue;
-
-            var style = window.getComputedStyle(slider, null);
-            // Measure width of range input
-            sliderWidth = parseInt(style.getPropertyValue('width'), 10);
-
-            // Figure out placement percentage between left and right of input
-            if (!slider.getAttribute('min')) {
-                minValue = 0;
-            } else {
-                minValue = slider.getAttribute('min');
-            }
-            var newPoint = (slider.value - minValue) / (slider.getAttribute('max') - minValue);
-
-            // Prevent bubble from going beyond left or right (unsupported browsers)
-            if (newPoint < 0) {
-                newPlace = 0;
-            } else if (newPoint > 1) {
-                newPlace = sliderWidth;
-            } else {
-                newPlace = sliderWidth * newPoint;
-            }
-
-            return {
-                'position': newPlace + 'px'
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all document sliders
-            var sliders = document.querySelectorAll('input[type="range"].slider');
-            [].forEach.call(sliders, function(slider) {
-                var output = findOutputForSlider(slider);
-                if (output) {
-                    if (slider.classList.contains('has-output-tooltip')) {
-                        // Get new output position
-                        var newPosition = getSliderOutputPosition(slider);
-
-                        // Set output position
-                        output.style['left'] = newPosition.position;
-                    }
-
-                    // Add event listener to update output when slider value change
-                    slider.addEventListener('input', function(event) {
-                        if (event.target.classList.contains('has-output-tooltip')) {
-                            // Get new output position
-                            var newPosition = getSliderOutputPosition(event.target);
-
-                            // Set output position
-                            output.style['left'] = newPosition.position;
-                        }
-
-                        // Update output with slider value
-                        output.value = event.target.value;
-                    });
-                }
-            });
-        });
     </script>
 </body></html>

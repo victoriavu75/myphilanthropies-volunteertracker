@@ -36,19 +36,26 @@ html {
     border-radius: 10px;
 }
 
-.slider {
-    width: 40em;
-}
-
 .main-container {
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-top: 5em;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
     margin-bottom: 5em;
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
+}
+
+.container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.select-multiple {
+    color: blue;
 }
 
 /* Type */

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Philanthropies - Personal Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" type="image/png" href="/images/My-Philanthropies-Logo-3.1-Square.png" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"> -->
+    <!-- <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script> -->
+    
+    <link href="forms.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="personal-details.js"></script>
+    <script type="text/javascript" src="node_modules/bulma-extensions/bulma-steps/dist/js/bulma-steps.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2.0.0/dist/js/bulma-tagsinput.min.js"></script>
+</head>
+
+<body>
+    <div class="card main-container">
+        <div class="steps" id="stepsDemo">
+            <div class="step-item is-active is-primary">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                <p class="step-title">Basic</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                <p class="step-title">Contact</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                <p class="step-title">Skills</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-marker">4</div>
+                <div class="step-details">
+                <p class="step-title">Finish</p>
+                </div>
+            </div>
+            <div class="steps-content">
+                <div class="step-content has-text-centered is-active">
+                    <div class="container">
+                        <div class="notification">
+                            <!-- <figure class="image image-is-centered is-64x64">
+                                <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+                            </figure> -->
+                            <div class="columns">
+                                <div class="column namerow">
+                                    <div class="field">
+                                        <label class="label has-text-left">First Name</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="First" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column namerow">
+                                    <div class="field">
+                                        <label class="label has-text-left">Last Name</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="Last" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-one-fifth namerow">
+                                    <div class="field">
+                                        <label class="label has-text-left">MI</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="MI" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="field employment-status-buttons">
+                                <label class="label has-text-left">Employment Status</label>
+                                <div class="buttons has-addons">
+                                    <button class="button select-multiple">Student</button>
+                                    <button class="button select-multiple">Full-Time</button>
+                                    <button class="button select-multiple">Part-Time</button>
+                                    <button class="button select-multiple">Unemployed</button>
+                                </div>
+                            </div>
+                            <div class="is-divider"></div>
+                            
+                            <div class="container has-text-left">
+                                <input class="is-checkradio" id="checkbox1" type="checkbox" name="checkBox">
+                                <label for="checkbox1">Do you have transportation to events?</label>
+                            </div>
+
+                            <div class="container has-text-left">
+                                <input class="is-checkradio" id="checkbox2" type="checkbox" name="checkBox">
+                                <label for="checkbox2">Are you a licensed driver?</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-content has-text-centered">
+                    <div class="container">
+                        <div class="notification">
+                            <div class="field">
+                                <label class="label has-text-left">Street</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="12345 Chucken Road" value="">
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label has-text-left">City</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="Irvine" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label has-text-left">State</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="CA" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label has-text-left">Zip Code</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="92616" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="is-divider"></div>
+                            <label class="label has-text-left">Phone</label>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="buttons has-addons">
+                                        <button class="button select-multiple">Home</button>
+                                        <button class="button select-multiple">Cell</button>
+                                    </div>
+                                </div>
+                                <div class="column has-text-left">
+                                    <div class="field">
+                                        <div class="field-label"></div>
+                                        <div class="field-body">
+                                            <div class="field is-expanded">
+                                            <div class="field has-addons">
+                                                <p class="control">
+                                                <a class="button is-static">
+                                                    +1
+                                                </a>
+                                                </p>
+                                                <p class="control is-expanded">
+                                                <input class="input" type="tel" placeholder="(xxx) xxx-xxxx">
+                                                </p>
+                                            </div>
+                                            <p class="help">Do not enter the first zero</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field has-text-left">
+                                        <input id="switchText" type="checkbox" name="switchText" class="switch is-small" checked="unchecked">
+                                        <label for="switchText">I would like to be texted as my primary form of communication.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-content has-text-centered">
+                    <div class="container">
+                        <div class="notification">
+                            <input class="input" type="tags" placeholder="Add Tag">
+                        </div>
+                    </div>
+                </div>
+                <div class="step-content has-text-centered">
+                <h1 class="title is-4">Your account is now created!</h1>
+                </div>
+            </div>
+            <div class="steps-actions">
+                <div class="steps-action">
+                    <a href="#" data-nav="previous" class="button is-light is-info">Previous</a>
+                </div>
+                <!-- <div>
+                    <p>You can always edit this later.</p>
+                </div> -->
+                <div class="steps-action" data-target="">
+                    <a href="#" data-nav="next" class="button is-light is-info">Next</a>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div id= "pageloader" class="pageloader">
+        <span class="title">Pageloader</span>
+    </div>
+    <script>
+        bulmaSteps.attach();
+        bulmaTagsinput.attach();
+
+        var buttons = document.querySelectorAll('button[data-target]');
+
+        // Check if there are any nav burgers
+        [].forEach.call(buttons, function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var pageloader = document.getElementById(e.currentTarget.dataset.target);
+            if (pageloader) {
+            pageloader.classList.toggle('is-active');
+            var pageloaderTimeout = setTimeout( function() {
+                pageloader.classList.toggle('is-active');
+                clearTimeout(pageloaderTimeout);
+            }, 3000 );
+            }
+        } );
+        });
+    </script>
+</body>
+</html>
