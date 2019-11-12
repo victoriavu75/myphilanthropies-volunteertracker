@@ -69,7 +69,23 @@
                         <p id="special" class="invalid">A <i>special</i> character</p>
                         <p id="length" class="invalid">Minimum <i>8 characters</i></p>
                     </div>
+                    <!--These are going to be the message responses to the POST request-->
+                    <div id="endPointError">
+                        <p class="invalid">Something went wrong with our code!</p>
+                    </div>
 
+                    <div id="serverError">
+                        <p class="invalid">Something is currently wrong with our server.</p>
+                    </div>
+
+                    <div id="userAlreadyExists">
+                        <p class="invalid">This email already has a user associated with it.</p>
+                    </div>
+
+                    <div id="successRegister">
+                        <p class="valid">You've successfully registered!</p>
+                        <p class="valid">Check your email to verify your account.</p>
+                    </div>
                     <!--Have an input that makes sure it is the same as the previous before sending-->
                     <!-- <div class="field">
                         <p class="control has-icons-left">

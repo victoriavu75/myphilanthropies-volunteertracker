@@ -141,3 +141,23 @@ a:hover {
     position: relative;
     left: -35px;
 }
+
+#endPointError
+{
+    display: none;
+}
+
+#serverError
+{
+    display: none;
+}
+
+#userAlreadyExists
+{
+    display: none;
+}
+
+#successRegister
+{
+    display: none;
+}
