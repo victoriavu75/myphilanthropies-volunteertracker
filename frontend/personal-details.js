@@ -22,8 +22,8 @@ var personalInfo = {
     "gender": "Prefer not to say",
     "age_range": 0,
     "job_status": "",
-    "driver": "",
-    "reliable_transportation": ""
+    "driver": "N",
+    "reliable_transportation": "N"
 };
 
 var contactInfo = {
@@ -66,20 +66,18 @@ function updatePersonalDetails()
     {
         personalInfo.job_status += "Unemployed ";
     });
-    if ($('#checkbox-1').prop("checked") == true)
+    if (document.querySelector('#checkbox1').checked)
     {
         personalInfo.reliable_transportation = "Y";
     }
-    else
-    {
+    else{
         personalInfo.reliable_transportation = "N";
     }
-    if ($('#checkbox-2').prop("checked") == true)
+    if (document.querySelector('#checkbox2').checked)
     {
         personalInfo.driver = "Y";
     }
-    else
-    {
+    else{
         personalInfo.driver = "N";
     }
 }

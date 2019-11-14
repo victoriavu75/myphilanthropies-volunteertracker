@@ -33,14 +33,14 @@
                 <p class="step-title">Contact</p>
                 </div>
             </div>
-            <div class="step-item">
+            <!-- <div class="step-item">
                 <div class="step-marker">3</div>
                 <div class="step-details">
                 <p class="step-title">Skills</p>
                 </div>
-            </div>
+            </div> -->
             <div class="step-item">
-                <div class="step-marker">4</div>
+                <div class="step-marker">3</div>
                 <div class="step-details">
                 <p class="step-title">Finish</p>
                 </div>
@@ -57,7 +57,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">First Name</label>
                                         <div class="control">
-                                            <input class="input" id="first-name" type="text" placeholder="First" value="">
+                                            <input class="input" id="first-name" type="text" placeholder="First" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">Last Name</label>
                                         <div class="control">
-                                            <input class="input" id="last-name" type="text" placeholder="Last" value="">
+                                            <input class="input" id="last-name" type="text" placeholder="Last" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -74,6 +74,30 @@
                                         <label class="label has-text-left">MI</label>
                                         <div class="control">
                                             <input class="input" id= "middle-initial" type="text" placeholder="MI" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Add in gender and age range-->
+                            <div class="columns">
+                                <div class="field employment-status-buttons">
+                                    <div class="column">
+                                        <label class="label has-text-left">Gender</label>
+                                        <div class="select has-text-left">
+                                            <select>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                            <option>Prefer Not To Say</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="column is-one-third">
+                                        <label class="label has-text-left">Age</label>
+                                        <div class="control">
+                                            <input class="input" id="age" type="text" placeholder="50" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +132,7 @@
                             <div class="field">
                                 <label class="label has-text-left">Street</label>
                                 <div class="control">
-                                    <input class="input" id="street-name" type="text" placeholder="12345 Chucken Road" value="">
+                                    <input class="input" id="street-name" type="text" placeholder="12345 Chucken Road" value="" required>
                                 </div>
                             </div>
                             <div class="columns">
@@ -116,7 +140,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">City</label>
                                         <div class="control">
-                                            <input class="input" id="city-name" type="text" placeholder="Irvine" value="">
+                                            <input class="input" id="city-name" type="text" placeholder="Irvine" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -124,7 +148,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">State</label>
                                         <div class="control">
-                                            <input class="input" id="state-name" type="text" placeholder="CA" value="">
+                                            <input class="input" id="state-name" type="text" placeholder="CA" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +156,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">Zip Code</label>
                                         <div class="control">
-                                            <input class="input" id="zipcode" type="text" placeholder="92616" value="">
+                                            <input class="input" id="zipcode" type="text" placeholder="92616" value="" required> 
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +182,7 @@
                                                 </a>
                                                 </p>
                                                 <p class="control is-expanded">
-                                                <input class="input" type="tel" placeholder="(xxx) xxx-xxxx">
+                                                <input class="input" type="tel" placeholder="(xxx) xxx-xxxx" required>
                                                 </p>
                                             </div>
                                             <p class="help">Do not enter the first zero</p>
@@ -176,13 +200,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="step-content has-text-centered">
+                <!-- <div class="step-content has-text-centered">
                     <div class="container">
                         <div class="notification">
                             <input class="input" type="tags" placeholder="Add Tag">
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="step-content has-text-centered">
                 <h1 class="title is-4">Your account is now created!</h1>
                 </div>
