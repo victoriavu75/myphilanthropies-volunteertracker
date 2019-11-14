@@ -66,14 +66,15 @@ function updatePersonalDetails()
     {
         personalInfo.job_status += "Unemployed ";
     });
-    if (document.querySelector('#checkbox1').checked)
+    if (document.getElementById('checkbox1').checked)
     {
+        alert("MEEP!");
         personalInfo.reliable_transportation = "Y";
     }
     else{
         personalInfo.reliable_transportation = "N";
     }
-    if (document.querySelector('#checkbox2').checked)
+    if (document.querySelector('checkbox2').checked)
     {
         personalInfo.driver = "Y";
     }
