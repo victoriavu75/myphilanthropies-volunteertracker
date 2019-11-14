@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="forgot-info.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet" />
 </head>
 
@@ -24,12 +25,12 @@
                     <div class="control">
                         <p style="text-align:center">Enter your e-mail to receive a password reset link. </p>
                         <br>
-                        <input class="input" type="text" placeholder="Enter an email">
+                        <input id="pswemail" class="input" type="text" name="username" placeholder="Enter an email">
                     </div>
                     <div class="field">
                         <div class="control">
                             <br>
-                            <button class="button is-link is-fullwidth">Send a confirmation e-mail</button>
+                            <button class="button is-link is-fullwidth" onclick=sendForgotEmail()>Send a confirmation e-mail</button>
                         </div>
                     </div>
                 </div>
