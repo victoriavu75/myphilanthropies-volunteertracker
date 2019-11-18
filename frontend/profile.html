@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
         h1,
         h6 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
         }
 
         h1 {
@@ -19,28 +22,70 @@
 
         h6 {
             font-size: 20px;
+        }
 
+        p,
+        li,
+        div {
+            font-family: 'Montserrat', sans-serif;
+            ;
+        }
+
+        a {
+            color: black;
+        }
+
+        .prof {
+            margin-top: 7.4px;
         }
     </style>
 </head>
 
 <body>
     <div class="columns">
-        <div class="column is-2">
-            <aside class="menu sticky">
+        <div class="column is-2" style="padding-right: 0;"> <!-- Left nav bar section -->
+            <aside class="menu sticky" style="text-align: center;">
                 <!-- Profile icon -->
-                
+                <figure class="image is-128x128" style="margin: 4vh auto; ">
+                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                </figure>
                 <!-- Name -->
+                <h1 style="color: black; margin: 4vh auto; font-weight: bold;">Akif</h1>
+                <h3 style="margin-top: -15%">Volunteer</h3>
                 <!-- Volunteer or Admin-->
-                <ul class="menu-list">
-                    <li><a>Home</a></li>
-                    <li><a>Inbox</a></li>
-                    <li><a>Settings</a></li>
-                </ul>
+                <br><br>
+                <div class="columns">
+                    <div class="column is-4"></div>
+                    <div class="columns">
+                        <div class="column is-1">
+                            <span class="icon prof"><i class="fas fa-home"></i></span>
+                            <span class="icon prof"><i class="fas fa-inbox"></i></span>
+                            <span class="icon prof"><i class="fas fa-cog"></i></span>
+                        </div>
+                        <div class="column is-5">
+                            <ul class="menu-list">
+                                <li><a style="float: left;">Home</a></li>
+                                <li><a style="float: left;">Inbox</a></li>
+                                <li><a style="float: left;">Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column is-3"></div>
+                </div>
+                <br>
+                <footer class="footer" style="margin: 20% 0 0 0; padding-bottom: 0%; background-color: white;">
+                    <div class="content has-text-centered">
+                        <figure class="image is-128x128" style="margin: 4vh auto; ">
+                            <img class="is-rounded" src="images/My-Philanthropies-Logo-3.1-Square.png">
+                        </figure>
+                        <p>MyPhilanthropies</p>
+                    </div>
+                </footer>
             </aside>
         </div>
-        <div class="column is-10">
-            <section class="hero" style="background-color: #57008B;">
+        <!-- Top banner section -->
+        <div class="column is-10" style="padding-left: 0;">
+            <section class="hero sticky" style="background-color: #57008B;">
                 <div class="hero-body">
                     <div class="container">
                         <div class="columns">
@@ -57,7 +102,7 @@
                         </div>
                         <div class="columns">
                             <div class="column is-1"></div>
-                            <div class="column is-1"><label class="label" style="color: white;">Filter by:</label></div>
+                            <div class="column is-1" style="color: white; text-align: center; vertical-align: middle; line-height: 40px;">Filter by:</div>
                             <div class="column is-2">
                                 <!-- filter component -->
                                 <div class="control">
@@ -65,7 +110,7 @@
                                         <select>
                                             <option>Date</option>
                                             <option>Program</option>
-                                            <option>Matching Skills</option>s
+                                            <option>Matching Skills</option>
                                         </select>
                                     </div>
                                 </div>
@@ -77,7 +122,7 @@
                                         <input class="input" type="text" placeholder="Search by tag, date, keyword">
                                     </p>
                                     <p class="control">
-                                        <a class="button is-info">
+                                        <a class="button" style="background-color: #FFBF00; color: white;">
                                             Search
                                         </a>
                                     </p>
@@ -89,5 +134,6 @@
                 </div>
             </section>
         </div>
+        <!-- Event Listings -->
     </div>
 </body></html>
