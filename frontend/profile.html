@@ -9,6 +9,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        @import 'bulma';
 
         h1,
         h6 {
@@ -38,35 +39,77 @@
         .prof {
             margin-top: 7.4px;
         }
+
+        .listing-spacers {
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .rsvp {
+            background-color: #b563e5;
+            color: white;
+        }
+
+        .eventinfo {
+            color: black;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .location {
+            color: darkgrey;
+        }
+
+        .taginfo {
+            margin-left: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            border-color: #0053E2;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .learnmore {
+            color: #0053E2;
+        }
+
+        .vertical {
+            border-right: 1px solid;
+            height: 100px;
+            margin-left: 20px;
+            margin-top: 50px;
+            color: lightgray
+        }
     </style>
 </head>
 
 <body>
     <div class="columns">
-        <div class="column is-2" style="padding-right: 0;"> <!-- Left nav bar section -->
+        <div class="column is-2" style="padding-right: 0;">
+            <!-- Left nav bar section -->
             <aside class="menu sticky" style="text-align: center;">
                 <!-- Profile icon -->
                 <figure class="image is-128x128" style="margin: 4vh auto; ">
                     <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
                 </figure>
                 <!-- Name -->
-                <h1 style="color: black; margin: 4vh auto; font-weight: bold;">Akif</h1>
+                <h1 style="color: black; margin: 4vh auto; font-weight: bold;">Annie</h1>
                 <h3 style="margin-top: -15%">Volunteer</h3>
                 <!-- Volunteer or Admin-->
                 <br><br>
                 <div class="columns">
                     <div class="column is-4"></div>
                     <div class="columns">
-                        <div class="column is-1">
+                        <div class="column is-1 coloring">
                             <span class="icon prof"><i class="fas fa-home"></i></span>
                             <span class="icon prof"><i class="fas fa-inbox"></i></span>
                             <span class="icon prof"><i class="fas fa-cog"></i></span>
                         </div>
-                        <div class="column is-5">
+                        <div class="column is-4 coloring">
                             <ul class="menu-list">
-                                <li><a style="float: left;">Home</a></li>
-                                <li><a style="float: left;">Inbox</a></li>
-                                <li><a style="float: left;">Settings</a></li>
+                                <li><a style="float: left; font-weight: bold">Home</a></li>
+                                <li><a style="float: left; ">Inbox</a></li>
+                                <li><a style="float: left; ">Settings</a></li>
                             </ul>
                         </div>
                     </div>
@@ -133,7 +176,159 @@
                     </div>
                 </div>
             </section>
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column is-1 listing-spacers">
+                    <p style="color: black;"><b>November</b></p>
+                    <h1 style="color: #0053E2">12</h1>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-7 listing-spacers">
+                    <p class="eventinfo"><b>Charity Ball</b></p><br>
+                    <p class="eventinfo location">Santa Ana, CA</p><br>
+                    <div class="tags">
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-car"></i></span>
+                            <p>Drivers Required</p>
+                        </span>
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-sign-language"></i></span>
+                            <p>ASL</p>
+                        </span>
+                    </div>
+                    <p class="eventinfo"><a class="learnmore" href=""><b>+</b> Learn More</a></p>
+                </div>
+                <div class="column is-2 listing-spacers">
+                    <div class="buttons">
+                        <button class="button is-medium is-fullwidth rsvp"><span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                            <p style="margin-left: 20px;"><b>RSVP</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="column is-2"></div>
+            </div>
+            <hr>
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column is-1 listing-spacers">
+                    <p style="color: black;"><b>November</b></p>
+                    <h1 style="color: #0053E2">18</h1>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-7 listing-spacers">
+                    <p class="eventinfo"><b>Help Leslie Bring Cookies</b></p><br>
+                    <p class="eventinfo location">Santa Ana, CA</p><br>
+                    <div class="tags">
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-car"></i></span>
+                            <p>Drivers Required</p>
+                        </span>
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-sign-language"></i></span>
+                            <p>ASL</p>
+                        </span>
+                    </div>
+                    <p class="eventinfo"><a class="learnmore" href=""><b>+</b> Learn More</a></p>
+                </div>
+                <div class="column is-2 listing-spacers">
+                    <div class="buttons">
+                        <button class="button is-medium is-fullwidth rsvp"><span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                            <p style="margin-left: 20px;"><b>RSVP</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="column is-2"></div>
+            </div>
+            <hr>
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column is-1 listing-spacers">
+                    <p style="color: black;"><b>November</b></p>
+                    <h1 style="color: #0053E2">21</h1>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-7 listing-spacers">
+                    <p class="eventinfo"><b>Rymmy's Icecream</b></p><br>
+                    <p class="eventinfo location">Santa Ana, CA</p><br>
+                    <div class="tags">
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-car"></i></span>
+                            <p>Drivers Required</p>
+                        </span>
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-sign-language"></i></span>
+                            <p>ASL</p>
+                        </span>
+                    </div>
+                    <p class="eventinfo"><a class="learnmore" href=""><b>+</b> Learn More</a></p>
+                </div>
+                <div class="column is-2 listing-spacers">
+                    <div class="buttons">
+                        <button class="button is-medium is-fullwidth rsvp"><span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                            <p style="margin-left: 20px;"><b>RSVP</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="column is-2"></div>
+            </div>
+            <hr>
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column is-1 listing-spacers">
+                    <p style="color: black;"><b>November</b></p>
+                    <h1 style="color: #0053E2">24</h1>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-7 listing-spacers">
+                    <p class="eventinfo"><b>Turkey Trot 5K</b></p><br>
+                    <p class="eventinfo location">Santa Ana, CA</p><br>
+                    <div class="tags">
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-car"></i></span>
+                            <p>Drivers Required</p>
+                        </span>
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-sign-language"></i></span>
+                            <p>ASL</p>
+                        </span>
+                    </div>
+                    <p class="eventinfo"><a class="learnmore" href=""><b>+</b> Learn More</a></p>
+                </div>
+                <div class="column is-2 listing-spacers">
+                    <div class="buttons">
+                        <button class="button is-medium is-fullwidth rsvp"><span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                            <p style="margin-left: 20px;"><b>RSVP</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="column is-2"></div>
+            </div>
+            <hr>
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column is-1 listing-spacers">
+                    <p style="color: black;"><b>December</b></p>
+                    <h1 style="color: #0053E2">4</h1>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-7 listing-spacers">
+                    <p class="eventinfo"><b>Deck the Halls for Charity</b></p><br>
+                    <p class="eventinfo location">Santa Ana, CA</p><br>
+                    <div class="tags">
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-car"></i></span>
+                            <p>Drivers Required</p>
+                        </span>
+                        <span class="tag is-info is-light taginfo"><span class="icon"><i class="fas fa-sign-language"></i></span>
+                            <p>ASL</p>
+                        </span>
+                    </div>
+                    <p class="eventinfo"><a class="learnmore" href=""><b>+</b> Learn More</a></p>
+                </div>
+                <div class="column is-2 listing-spacers">
+                    <div class="buttons">
+                        <button class="button is-medium is-fullwidth rsvp"><span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                            <p style="margin-left: 20px;"><b>RSVP</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="column is-2"></div>
+            </div>
+            <hr>
+
         </div>
-        <!-- Event Listings -->
     </div>
+    <!-- Event Listings -->
+
 </body></html>
