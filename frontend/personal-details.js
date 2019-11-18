@@ -81,7 +81,7 @@ function updatePersonalDetails()
         personalInfo.driver = "N";
     }
 }
-
+// STRIP dashes and parentheses in phone numbers
 function updateContactInfo()
 {
     $('#street-name').change(function()
