@@ -136,3 +136,11 @@ function changeCheckBox3()
         contactInfo.text = "Y";
     }
 }
+
+function submitInformation()
+{
+    var http = new XMLHttpRequest();
+    var personalInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/personalinfo/";
+    var contactInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/contactinfo";
+    console.log("Send personalInfo and contactInfo to the endpoint");
+}
