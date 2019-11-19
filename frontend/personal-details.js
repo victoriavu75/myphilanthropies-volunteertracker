@@ -66,19 +66,27 @@ function updatePersonalDetails()
     {
         personalInfo.job_status += "Unemployed ";
     });
-    if (document.querySelector('#checkbox1').checked)
+}
+
+function changeCheckBox1()
+{
+    if (personalInfo.reliable_transportation == "Y")
     {
-        personalInfo.reliable_transportation = "Y";
-    }
-    else{
         personalInfo.reliable_transportation = "N";
     }
-    if (document.querySelector('#checkbox2').checked)
+    else{
+        personalInfo.reliable_transportation = "Y";
+    }
+}
+
+function changeCheckBox2()
+{
+    if (personalInfo.driver == "Y")
     {
-        personalInfo.driver = "Y";
+        personalInfo.driver = "N";
     }
     else{
-        personalInfo.driver = "N";
+        personalInfo.driver = "Y";
     }
 }
 
@@ -115,13 +123,24 @@ function updateContactInfo()
     {
         phone_info.type = "Cell";
     });
-    if ($('#switchText').prop("checked") == true)
-    {
-        phone_info.text = "Y";
-    }
-    else
-    {
-        phone_info.text = "N";
-    }
     contactInfo.numbers.push(phone_info);
+}
+
+function changeCheckBox3()
+{
+    if (contactInfo.text == "Y")
+    {
+        contactInfo.text = "N";
+    }
+    else{
+        contactInfo.text = "Y";
+    }
+}
+
+function submitInformation()
+{
+    var http = new XMLHttpRequest();
+    var personalInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/personalinfo/";
+    var contactInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/contactinfo";
+    console.log("Send personalInfo and contactInfo to the endpoint");
 }

@@ -33,12 +33,6 @@
                 <p class="step-title">Contact</p>
                 </div>
             </div>
-            <!-- <div class="step-item">
-                <div class="step-marker">3</div>
-                <div class="step-details">
-                <p class="step-title">Skills</p>
-                </div>
-            </div> -->
             <div class="step-item">
                 <div class="step-marker">3</div>
                 <div class="step-details">
@@ -115,12 +109,12 @@
                             <div class="is-divider"></div>
                             
                             <div class="container has-text-left">
-                                <input class="is-checkradio" id="checkbox1" type="checkbox" name="checkBox">
+                                <input class="is-checkradio" id="checkbox1" type="checkbox" name="checkBox" onchange="changeCheckBox1()">
                                 <label for="checkbox1">Do you have transportation to events?</label>
                             </div>
 
                             <div class="container has-text-left">
-                                <input class="is-checkradio" id="checkbox2" type="checkbox" name="checkBox">
+                                <input class="is-checkradio" id="checkbox2" type="checkbox" name="checkBox" onchange="changeCheckBox2()">
                                 <label for="checkbox2">Are you a licensed driver?</label>
                             </div>
                         </div>
@@ -192,7 +186,7 @@
                                 </div>
                                 <div class="column">
                                     <div class="field has-text-left">
-                                        <input id="switchText" type="checkbox" name="switchText" class="switch is-small" checked="unchecked">
+                                        <input id="switchText" type="checkbox" name="switchText" class="switch is-small" checked="unchecked" onchange="changeCheckBox3()">
                                         <label for="switchText">I would like to be texted as my primary form of communication.</label>
                                     </div>
                                 </div>
@@ -200,19 +194,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="step-content has-text-centered">
-                    <div class="container">
-                        <div class="notification">
-                            <input class="input" type="tags" placeholder="Add Tag">
-                        </div>
-                    </div>
-                </div> -->
                 <div class="step-content has-text-centered">
                 <h1 class="title is-4">Your account is now created!</h1>
                 <div class="is-divider"></div>
                 <p>Click the button below to view your profile.</p>
                 <br>
-                <a href="user-profile.html" id="finished-button" class="button is-link" type="submit">View Profile</a>
+                <a href="user-profile.html" id="finished-button" class="button is-link" type="submit" onclick="submitInformation()">View Profile</a>
                 <br>
                 <br>
                 <p>Or return to the log in page to sign into another account.</p>
