@@ -14,6 +14,8 @@ $(document).ready(function(){
         }
     });
   });
+
+ 
 //JSON objects to send to the server
 var personalInfo = {
     "first_name": "",
@@ -153,10 +155,26 @@ function changeCheckBox3()
 
 function submitInformation()
 {
-    var http = new XMLHttpRequest();
+    // var http = new XMLHttpRequest();
     var personalInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/personalinfo/";
-    var contactInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/contactinfo";
-    http.open("POST", personalInfoEndpoint, true);
-    http.send(personalInfo);
+    // var contactInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/contactinfo";
+    // http.open("POST", personalInfoEndpoint, true);
+    // http.send(personalInfo);
+    var x = localStorage.getItem("token");
+    $("button").click(function(e){
+        e.preventDefault();
+        $.ajax(
+            {
+                type: "POST",
+                url: personalInfoEndpoint,
+                dataType: 'json',
+                data: personalInfo,
+                beforeSend: function(XMLHttpRequest)
+                {
+                    XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
+                }
+            }
+        );
+    });
     console.log("Send personalInfo and contactInfo to the endpoint");
 }
