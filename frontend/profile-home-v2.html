@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        @import 'bulma';
+
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .desktopview {
+            display: none !important;
+        }
+
+        .desktop-aside-fixed {
+            position: fixed;
+            left: 0;
+        }
+
+        .desktop-main-fixed {
+            position: fixed;
+            left: 16.40%;
+        }
+
+        .listingadjust {
+            margin-top: 31vh;
+            margin-left: 17.85vw;
+        }
+        
+        .afterlistings {
+            margin-left: 17.85vw;
+        }
+
+        .hradjust {
+            margin-left: 17.85vw;
+            width: 100vw;
+        }
+
+        #name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #type {
+            font-size: 1em;
+        }
+
+        .imgauto {
+            margin: auto;
+        }
+
+        .spacer {
+            margin-top: 2vh;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .fixedlogo {
+            position: fixed;
+            bottom: 5%;
+            left: 3.5%;
+        }
+
+        .btncolor {
+            background-color: #b563e5;
+            color: white;
+        }
+
+        .hidebtns{
+            z-index: -1;
+        }
+        
+        .mp-purple-background {
+            background-color: #57008B;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        .shiftright {
+            margin-left: 5%;
+        }
+
+        .shiftright-2 {
+            margin-left: 7%;
+        }
+
+        .date {
+            color: #0053E2;
+        }
+
+        .vertical {
+            border-left: 1px solid lightgrey;
+            height: 100px;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-left: -10px;
+        }
+        
+        .verticalaside {
+            position: fixed;
+            left: 17vw;
+            height: 120vh;
+            border-left: 3px solid lightgrey;
+        }
+        
+        .filler {
+            background-color: orange;
+        }
+
+        .learnmore {
+            color: #0053E2;
+
+        }
+        
+        
+    </style>
+    <!--Adding in http javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="profile_home.js"></script>
+</head>
+
+<body>
+    <div class="columns desktopview">
+        <!-- This section is for the user's profile tab -->
+        <div class="column is-2-desktop desktop-aside-fixed">
+            <figure class="image is-128x128 imgauto">
+                <img class="is-rounded" style="margin-top: 4vh;" src="images/abdul.jpeg">
+            </figure>
+            <h1 class="title is-3 has-text-centered spacer">Abdul</h1>
+            <h2 class="subtitle is-6 has-text-centered spacer">Volunteer</h2>
+            <div class="columns">
+                <!-- Columns for home -->
+                <div class="column is-one-fourth"></div>
+                <div class="column is-one-half"><a class="button btncolor"><span class="icon"><i class="fas fa-home"></i></span>
+                        <p>Home</p>
+                    </a></div>
+                <div class="column is-one-fourth"></div>
+            </div>
+            <div class="columns">
+                <!-- Columns for setting -->
+                <div class="column is-one-fourth"></div>
+                <div class="column is-one-half"><a class="button"><span class="icon"><i class="fas fa-cog"></i></span>
+                        <p>Profile</p>
+                    </a></div>
+                <div class="column is-one-fourth"></div>
+            </div>
+            <hr>
+            <div class="columns">
+                <!-- Columns for sign out -->
+                <div class="column is-one-fourth"></div>
+                <div class="column is-one-half"><a class="button is-danger"><span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <p>Log Out</p>
+                    </a></div>
+                <div class="column is-one-fourth"></div>
+            </div>
+            <div class="fixedlogo">
+                <figure class="image is-96x96 imgauto">
+                    <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+                </figure>
+                <h2 class="subtitle is-6 has-text-centered">MyPhilanthropies</h2>
+            </div>
+        </div>
+        <div class="verticalaside"></div>
+        <!-- VOLUNTEER EVENTS -->
+        <div class="column is-10-desktop">
+            <div class="columns">
+                <div class="column is-12 desktop-main-fixed">
+                    <section class="hero mp-purple-background">
+                        <div class="hero-body">
+                            <div class="container">
+                                <h1 class="title white-text shiftright">
+                                    Upcoming Events
+                                </h1>
+                                <h2 class="subtitle is-6 white-text shiftright">
+                                    Learn more and volunteer!
+                                </h2>
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="field has-addons shiftright-2">
+                                            <div class="control is-expanded">
+                                                <input class="input" type="text" placeholder="Search by tag, date, keyword">
+                                            </div>
+                                            <div class="control">
+                                                <a class="button is-info">
+                                                    Search
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Event listings begin here -->
+            <!-- First listing margin-top by 31vh -->
+            <div class="columns listingadjust">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+            <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+            <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+            <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+                        <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+            <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+                        <div class="columns afterlistings">
+                <div class="column is-1"></div>
+                <div class="column is-2">
+                    <h1 class="title is-6 has-text-centered">November</h1>
+                    <h2 class="subtitle has-text-centered"><b class="date">27</b></h2>
+                </div>
+                <div class="vertical"></div>
+                <div class="column is-6">
+                    <h1 class="title is-6">Thanksgiving Dinner</h1>
+                    <h2 class="subtitle is-7">Santa Ana, CA</h2>
+                    <div class="tags">
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+                        <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+                    </div>
+                    <p class="learnmore"><a>+ Learn More</a></p>
+                </div>
+                <div class="column is-2 ">
+                    <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>RSVP</b></button>
+                </div>
+                <div class="column is-1 "></div>
+            </div>
+            <hr class="hradjust">
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-one-third mp-purple-background">ONE</div>
+        <div class="column is-one-third">
+            
+        </div>
+        <div class="column is-one-third mp-purple-background">THREE</div>
+    </div>
+</body></html>
