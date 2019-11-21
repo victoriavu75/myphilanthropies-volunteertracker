@@ -133,7 +133,7 @@ function updateContactInfo()
     });
     $('#zipcode').change(function()
     {
-        contactInfo.zip_code = this.value;
+        contactInfo.zip_code = parseInt(this.value);
     });
     $('#home-number').click(function()
     {
@@ -165,7 +165,7 @@ function submitPersonalInfo()
 {
     var x = localStorage.getItem("token");
     var personalInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/personalinfo/";
-    $.ajax(
+    return $.ajax(
         {
             type: "POST",
             url: personalInfoEndpoint,
@@ -181,14 +181,13 @@ function submitPersonalInfo()
             }
         }
     );
-    return;
 }
 
 function submitContactInfo()
 {
     var contactInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/contactinfo/";
     var x = localStorage.getItem("token");
-    $.ajax(
+    return $.ajax(
         {
             type: "POST",
             url: contactInfoEndpoint,
@@ -204,7 +203,6 @@ function submitContactInfo()
             }
         }
     );
-    return;
 }
 
 function submitInformation()
@@ -213,6 +211,6 @@ function submitInformation()
         e.preventDefault();
         submitPersonalInfo();
         submitContactInfo();
+        return;    
     });     
-    return;    
 }
