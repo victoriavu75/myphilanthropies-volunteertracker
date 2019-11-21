@@ -14,13 +14,17 @@ $(document).ready(function(){
         }
     });
   });
+
+ 
 //JSON objects to send to the server
 var personalInfo = {
     "first_name": "",
     "last_name": "",
     "middle_init": "",
     "gender": "Prefer not to say",
-    "age_range": 0,
+    "month": "",
+    "day": "",
+    "year": "",
     "job_status": "",
     "driver": "N",
     "reliable_transportation": "N"
@@ -49,6 +53,18 @@ function updatePersonalDetails()
     $('#middle-initial').change(function()
     {
         personalInfo.middle_init = this.value;
+    });
+    $('#month').change(function()
+    {
+        personalInfo.month = this.value;
+    });
+    $('#day').change(function()
+    {
+        personalInfo.day = this.value;
+    });
+    $('#year').change(function()
+    {
+        personalInfo.year = this.value;
     });
     $('#student').click(function()
     {
@@ -139,8 +155,26 @@ function changeCheckBox3()
 
 function submitInformation()
 {
-    var http = new XMLHttpRequest();
-    var personalInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/personalinfo/";
-    var contactInfoEndpoint = "http://127.0.0.1:8000/idm/volunteer/contactinfo";
+    // var http = new XMLHttpRequest();
+    var personalInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/personalinfo/";
+    // var contactInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/contactinfo";
+    // http.open("POST", personalInfoEndpoint, true);
+    // http.send(personalInfo);
+    var x = localStorage.getItem("token");
+    $("button").click(function(e){
+        e.preventDefault();
+        $.ajax(
+            {
+                type: "POST",
+                url: personalInfoEndpoint,
+                dataType: 'json',
+                data: personalInfo,
+                beforeSend: function(XMLHttpRequest)
+                {
+                    XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
+                }
+            }
+        );
+    });
     console.log("Send personalInfo and contactInfo to the endpoint");
 }

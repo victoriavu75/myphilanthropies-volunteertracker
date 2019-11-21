@@ -16,6 +16,8 @@
     <script src="personal-details.js"></script>
     <script type="text/javascript" src="node_modules/bulma-extensions/bulma-steps/dist/js/bulma-steps.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2.0.0/dist/js/bulma-tagsinput.min.js"></script>
+    <!--Cookies-->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 </head>
 
 <body>
@@ -89,14 +91,25 @@
                                 </div>
                                 <div class="field">
                                     <div class="column">
-                                        <label class="label has-text-left">Date of Birth</label>
+                                        <label class="label has-text-left">Birth Month</label>
                                         <div class="control">
-                                            <input class="input" id="month" type="text" placeholder="mm" value="" required>
+                                            <input class="input" id="month" type="text" placeholder="mm" value="">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="field">
                                     <div class="column">
+                                        <label class="label has-text-left">Birth Day</label>
                                         <div class="control">
-                                            
+                                            <input class="input" id="day" type="text" placeholder="dd" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="column">
+                                        <label class="label has-text-left">Birth Year</label>
+                                        <div class="control">
+                                            <input class="input" id="year" type="text" placeholder="yyyy" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +217,7 @@
                 <div class="is-divider"></div>
                 <p>Click the button below to view your profile.</p>
                 <br>
-                <a href="user-profile.html" id="finished-button" class="button is-link" type="submit" onclick="submitInformation()">View Profile</a>
+                <button id="finished-button" class="button is-link" type="submit" onclick="submitInformation()">View Profile</button>
                 <br>
                 <br>
                 <p>Or return to the log in page to sign into another account.</p>

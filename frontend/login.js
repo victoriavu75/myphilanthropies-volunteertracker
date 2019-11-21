@@ -10,6 +10,9 @@ function logIn()
                 }
             else */if (data.firstTime == true)
                 {
+                    //Running into issues with cookies -> going local storage for now
+                    var authToken = data.token;
+                    localStorage.setItem("token", authToken);
                     window.location.replace("personal-details_v2.html");
                 }
             else if (data.firstTime == false){
@@ -20,4 +23,3 @@ function logIn()
         })
     })
 }
-
