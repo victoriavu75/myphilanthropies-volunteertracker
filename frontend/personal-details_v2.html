@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"> -->
     <!-- <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script> -->
-    
+
     <link href="forms.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/mystyles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -26,19 +26,19 @@
             <div class="step-item is-active is-primary">
                 <div class="step-marker">1</div>
                 <div class="step-details">
-                <p class="step-title">Basic</p>
+                    <p class="step-title">Basic</p>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-marker">2</div>
                 <div class="step-details">
-                <p class="step-title">Contact</p>
+                    <p class="step-title">Contact</p>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-marker">3</div>
                 <div class="step-details">
-                <p class="step-title">Finish</p>
+                    <p class="step-title">Finish</p>
                 </div>
             </div>
             <div class="steps-content">
@@ -69,7 +69,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">MI</label>
                                         <div class="control">
-                                            <input class="input" id= "middle-initial" type="text" placeholder="MI" value="">
+                                            <input class="input" id="middle-initial" type="text" placeholder="MI" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -81,10 +81,10 @@
                                         <label class="label has-text-left">Gender</label>
                                         <div class="select has-text-left">
                                             <select>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>Other</option>
-                                            <option>Prefer Not To Say</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Other</option>
+                                                <option>Prefer Not To Say</option>
                                             </select>
                                         </div>
                                     </div>
@@ -114,18 +114,19 @@
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="field employment-status-buttons">
                                 <label class="label has-text-left">Employment Status</label>
                                 <div class="buttons has-addons">
-                                    <button id = "student" class="button select-multiple">Student</button>
-                                    <button id = "full-time" class="button select-multiple">Full-Time</button>
-                                    <button id = "part-time" class="button select-multiple">Part-Time</button>
-                                    <button id = "unemployed" class="button select-multiple">Unemployed</button>
+                                    <button id="student" class="button select-multiple">Student</button>
+                                    <button id="full-time" class="button select-multiple">Full-Time</button>
+                                    <button id="part-time" class="button select-multiple">Part-Time</button>
+                                    <button id="unemployed" class="button select-multiple">Self-employed</button>
+                                    <button id="unemployed" class="button select-multiple">Unemployed</button>
                                 </div>
                             </div>
                             <div class="is-divider"></div>
-                            
+
                             <div class="container has-text-left">
                                 <input class="is-checkradio" id="checkbox1" type="checkbox" name="checkBox" onchange="changeCheckBox1()">
                                 <label for="checkbox1">Do you have transportation to events?</label>
@@ -168,7 +169,7 @@
                                     <div class="field">
                                         <label class="label has-text-left">Zip Code</label>
                                         <div class="control">
-                                            <input class="input" id="zipcode" type="text" placeholder="92616" value="" required> 
+                                            <input class="input" id="zipcode" type="text" placeholder="92616" value="" required>
                                         </div>
                                     </div>
                                 </div>
@@ -187,17 +188,17 @@
                                         <div class="field-label"></div>
                                         <div class="field-body">
                                             <div class="field is-expanded">
-                                            <div class="field has-addons">
-                                                <p class="control">
-                                                <a class="button is-static">
-                                                    +1
-                                                </a>
-                                                </p>
-                                                <p class="control is-expanded">
-                                                <input class="input" type="tel" placeholder="(xxx) xxx-xxxx" required>
-                                                </p>
-                                            </div>
-                                            <p class="help">Do not enter the first zero</p>
+                                                <div class="field has-addons">
+                                                    <p class="control">
+                                                        <a class="button is-static">
+                                                            +1
+                                                        </a>
+                                                    </p>
+                                                    <p class="control is-expanded">
+                                                        <input class="input" type="tel" placeholder="(xxx) xxx-xxxx" required>
+                                                    </p>
+                                                </div>
+                                                <p class="help">Do not enter the first zero</p>
                                             </div>
                                         </div>
                                     </div>
@@ -213,16 +214,16 @@
                     </div>
                 </div>
                 <div class="step-content has-text-centered">
-                <h1 class="title is-4">Your account is now created!</h1>
-                <div class="is-divider"></div>
-                <p>Click the button below to view your profile.</p>
-                <br>
-                <button id="finished-button" class="button is-link" type="submit" onclick="submitInformation()">View Profile</button>
-                <br>
-                <br>
-                <p>Or return to the log in page to sign into another account.</p>
-                <br>
-                <a href="login.html" id="return-button" class="button is-link has-text-white-ter" type="submit">Return Home</a>
+                    <h1 class="title is-4">Your account is now created!</h1>
+                    <div class="is-divider"></div>
+                    <p>Click the button below to view your profile.</p>
+                    <br>
+                    <button id="finished-button" class="button is-link" type="submit" onclick="submitInformation()">View Profile</button>
+                    <br>
+                    <br>
+                    <p>Or return to the log in page to sign into another account.</p>
+                    <br>
+                    <a href="login.html" id="return-button" class="button is-link has-text-white-ter" type="submit">Return Home</a>
                 </div>
             </div>
             <div class="steps-actions">
@@ -234,11 +235,11 @@
                 </div> -->
                 <div class="steps-action" data-target="">
                     <a href="#" data-nav="next" class="button is-light is-info">Next</a>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
-    <div id= "pageloader" class="pageloader">
+    <div id="pageloader" class="pageloader">
         <span class="title">Pageloader</span>
     </div>
     <script>
@@ -249,19 +250,18 @@
 
         // Check if there are any nav burgers
         [].forEach.call(buttons, function(button) {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
 
-            var pageloader = document.getElementById(e.currentTarget.dataset.target);
-            if (pageloader) {
-            pageloader.classList.toggle('is-active');
-            var pageloaderTimeout = setTimeout( function() {
-                pageloader.classList.toggle('is-active');
-                clearTimeout(pageloaderTimeout);
-            }, 3000 );
-            }
-        } );
+                var pageloader = document.getElementById(e.currentTarget.dataset.target);
+                if (pageloader) {
+                    pageloader.classList.toggle('is-active');
+                    var pageloaderTimeout = setTimeout(function() {
+                        pageloader.classList.toggle('is-active');
+                        clearTimeout(pageloaderTimeout);
+                    }, 3000);
+                }
+            });
         });
     </script>
-</body>
-</html>
+</body></html>
