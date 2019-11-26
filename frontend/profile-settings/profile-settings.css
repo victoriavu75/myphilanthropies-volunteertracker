@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* @import 'bulma'; */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.desktopview {
+    display: none !important;
+}
+
+.desktop-aside-fixed {
+    position: fixed;
+    left: 0;
+}
+
+.desktop-main-fixed {
+    position: fixed;
+    left: 16.40%;
+}
+
+.listingadjust {
+    margin-top: 31vh;
+    margin-left: 17.85vw;
+}
+
+.afterlistings {
+    margin-left: 17.85vw;
+}
+
+.hradjust {
+    margin-left: 17.85vw;
+    width: 100vw;
+}
+
+#name {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#type {
+    font-size: 1em;
+}
+
+.imgauto {
+    margin: auto;
+}
+
+.spacer {
+    margin-top: 2vh;
+}
+
+.center {
+    text-align: center;
+}
+
+.fixedlogo {
+    position: fixed;
+    bottom: 5%;
+    left: 3.5%;
+}
+
+.btncolor {
+    background-color: #b563e5;
+    color: white;
+}
+
+.hidebtns{
+    z-index: -1;
+}
+
+.mp-purple-background {
+    background-color: #57008B;
+}
+
+.white-text {
+    color: white;
+}
+
+.shiftright {
+    margin-left: 5%;
+}
+
+.shiftright-2 {
+    margin-left: 7%;
+}
+
+.date {
+    color: #0053E2;
+}
+
+.vertical {
+    border-left: 1px solid lightgrey;
+    height: 100px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.verticalaside {
+    position: fixed;
+    left: 17vw;
+    height: 120vh;
+    border-left: 3px solid lightgrey;
+}
+
+.filler {
+    background-color: orange;
+}
+
+.learnmore {
+    color: #0053E2;
+
+}
