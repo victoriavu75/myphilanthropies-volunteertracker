@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import 'bulma';
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.desktop-aside-fixed {
+    position: fixed;
+    left: 0;
+    }
+
+.desktop-main-fixed {
+    position: fixed;
+    left: 16.40%;
+    }
+
+.listingadjust {
+    margin-top: 31vh;
+    margin-left: 17.85vw;
+    }
+
+.buttonrow {
+    margin-top: 32vh;
+    margin-left: 64vw;
+}    
+
+.afterlistings {
+    margin-left: 17.85vw;
+    }
+
+.hradjust {
+    margin-left: 17.85vw;
+    width: 100vw;
+    }
+
+#name {
+    font-size: 2em;
+    font-weight: bold;
+    }
+
+#type {
+    font-size: 1em;
+    }
+
+.imgauto {
+    margin: auto;
+    }
+
+.spacer {
+    margin-top: 2vh;
+    }
+
+.center {
+    text-align: center;
+    }
+
+.fixedlogo {
+    position: fixed;
+    bottom: 5%;
+    left: 3.5%;
+    }
+
+.btncolor {
+    background-color: #b563e5;
+    color: white;
+    }
+
+.hidebtns{
+    z-index: -1;
+    }
+        
+.mp-purple-background {
+    background-color: #57008B;
+    }
+
+.white-text {
+    color: white;
+    }
+
+.shiftright {
+    margin-left: 5%;
+    }
+
+.shiftright-2 {
+    margin-left: 7%;
+    }
+
+.date {
+    color: #0053E2;
+    }
+
+.vertical {
+    border-left: 1px solid lightgrey;
+    height: 100px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: -10px;
+    }
+        
+.verticalaside {
+    position: fixed;
+    left: 17vw;
+    height: 120vh;
+    border-left: 3px solid lightgrey;
+    }
+        
+.filler {
+    background-color: orange;
+    }
+
+.learnmore {
+    color: #0053E2;
+    }
+
+/* This is gonna format the pop-up to add events */
+
+.add-event-form{
+    display: none;
+    margin-left: 50vw;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 500px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

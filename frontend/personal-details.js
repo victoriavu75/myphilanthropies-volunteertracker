@@ -35,15 +35,10 @@ var contactInfo = {
     "city": "someplace",
     "state": "CA",
     "zip_code": 92612,
-    "numbers": []
-};
-
-//Add the numbers to the list of phone numbers
-var phone_info = {
     "type": "",
     "phone_number": 0,
     "text": "Y"
-}
+};
 
 //First replace empty strings with information from the user inputs
 //Then, on click of the "submit at the end" button, send the information to the server.
@@ -93,6 +88,10 @@ function updatePersonalDetails()
     {
         personalInfo.job_status += "Unemployed ";
     });
+    $('#selfemployed').click(function()
+    {
+        personalInfo.job_status += "Self-employed ";
+    });
 }
 
 function changeCheckBox1()
@@ -137,30 +136,31 @@ function updateContactInfo()
     });
     $('#home-number').click(function()
     {
-        phone_info.type = "Home";
+        contactInfo.type = "Home";
     });
     $('#cell-number').click(function()
     {
-        phone_info.type = "Cell";
+        contactInfo.type = "Cell";
     });
     $('#phonenumber').change(function()
     {
-        phone_info.phone_number = "+1"+this.value;
-    })
-    contactInfo.numbers.push(phone_info);
+        contactInfo.phone_number = "+1"+this.value;
+    });
+    changeCheckBox3();
 }
 
 function changeCheckBox3()
 {
-    if (phone_info.text == "Y")
+    if (contactInfo.text == "Y")
     {
-        phone_info.text = "N";
+        contactInfo.text = "N";
     }
     else{
-        phone_info.text = "Y";
+        contactInfo.text = "Y";
     }
 }
 
+//Submitting the personalInfo object to the endpoint
 function submitPersonalInfo()
 {
     var x = localStorage.getItem("token");
@@ -178,11 +178,13 @@ function submitPersonalInfo()
             complete: function(XMLHttpRequest, status)
             {
                 console.log(status);
+                return status;
             }
         }
     );
 }
 
+//Submitting contactInfo object to the endpoint
 function submitContactInfo()
 {
     var contactInfoEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/contactinfo/";
@@ -192,7 +194,8 @@ function submitContactInfo()
             type: "POST",
             url: contactInfoEndpoint,
             dataType: 'json',
-            data: contactInfo,
+            data: JSON.stringify(contactInfo),
+            contentType: 'application/json; char=utf-8',
             beforeSend: function(XMLHttpRequest)
             {
                 XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
@@ -200,17 +203,57 @@ function submitContactInfo()
             complete: function(XMLHttpRequest, status)
             {
                 console.log(status);
+                return status;
             }
         }
     );
 }
 
+//On click event, send everything and return so that you don't create multiple send requests
 function submitInformation()
 {
     $("button").click(function(e){
         e.preventDefault();
         submitPersonalInfo();
         submitContactInfo();
-        return;    
-    });     
+        submitSkills();
+    });
+
+}
+
+//testing skills
+function submitSkills()
+{
+    var skillEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/volunteer/skills/";
+    var x = localStorage.getItem('token');
+    var test = {
+        "hardskills": [
+            {
+                "hard_skill": "Programming"
+            }
+        ],
+        "softskills": [
+            {
+                "soft_skill": "teamwork"
+            }
+        ]
+};
+    return $.ajax(
+        {
+            type: "POST",
+            url: skillEndpoint,
+            dataType: 'json',
+            data: JSON.stringify(test),
+            contentType: 'application/json; char=utf-8',
+            beforeSend: function(XMLHttpRequest)
+            {
+                XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
+            },
+            complete: function(XMLHttpRequest, status)
+            {
+                console.log(status);
+                return status;
+            }
+        }
+    );
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Admin View Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="icon" href="images/favicon.ico">
+    <!--CSS-->
+    <link href="admin.css" type="text/css" rel="stylesheet" />
+    <!--Adding in http javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="admin_home.js"></script>
+</head>
+<body>
+    <!-- This section is for the user's profile tab -->
+    <div class="column is-2-desktop desktop-aside-fixed">
+        <h1 class="title is-3 has-text-centered spacer">Admin</h1>
+        <div class="columns">
+            <!-- Columns for home -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button btncolor"><span class="icon"><i class="fas fa-home"></i></span>
+                <p>Home</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="columns">
+            <!-- Columns for events -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button"><span class="icon"><i class="fas fa-cog"></i></span>
+                <p>Events</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="columns">
+            <!-- Columns for volunteers -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button"><span class="icon"><i class="fas fa-cog"></i></span>
+                <p>Volunteers</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <hr>
+        <div class="columns">
+            <!-- Columns for sign out -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button is-danger"><span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                <p>Log Out</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="fixedlogo">
+            <figure class="image is-96x96 imgauto">
+                <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+            </figure>
+            <h2 class="subtitle is-6 has-text-centered">MyPhilanthropies</h2>
+        </div>
+    </div>
+    <div class="verticalaside"></div>
+    <div class="column is-10-desktop">
+        <div class="columns">
+            <div class="column is-12 desktop-main-fixed">
+                <section class="hero mp-purple-background">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title white-text shiftright">
+                                Volunteer List
+                            </h1>
+                            <h2 class="subtitle is-6 white-text shiftright">
+                                View all the volunteers!
+                            </h2>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field has-addons shiftright-2">
+                                        <div class="control is-expanded">
+                                            <input class="input" type="text" placeholder="Filter by name or skill">
+                                        </div>
+                                        <div class="control">
+                                            <a class="button is-info">
+                                                Filter
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    </div>
+</body>
+</html>

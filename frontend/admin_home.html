@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Admin View Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="icon" href="images/favicon.ico">
+    <!--CSS-->
+    <link href="admin.css" type="text/css" rel="stylesheet" />
+    <!--Adding in http javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="admin_home.js"></script>
+</head>
+<body>
+     <!-- This section is for the user's profile tab -->
+     <div class="column is-2-desktop desktop-aside-fixed">
+        <h1 class="title is-3 has-text-centered spacer">Admin</h1>
+        <div class="columns">
+            <!-- Columns for home -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button btncolor"><span class="icon"><i class="fas fa-home"></i></span>
+                <p>Home</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="columns">
+            <!-- Columns for events -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button"><span class="icon"><i class="fas fa-cog"></i></span>
+                <p>Events</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="columns">
+            <!-- Columns for volunteers -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button"><span class="icon"><i class="fas fa-cog"></i></span>
+                <p>Volunteers</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <hr>
+        <div class="columns">
+            <!-- Columns for sign out -->
+            <div class="column is-one-fourth"></div>
+            <div class="column is-one-half"><a class="button is-danger"><span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                <p>Log Out</p>
+            </a></div>
+            <div class="column is-one-fourth"></div>
+        </div>
+        <div class="fixedlogo">
+            <figure class="image is-96x96 imgauto">
+                <img src="images/My-Philanthropies-Logo-3.1-Square.png">
+            </figure>
+            <h2 class="subtitle is-6 has-text-centered">MyPhilanthropies</h2>
+        </div>
+    </div>
+    <div class="verticalaside"></div>
+<!-- VOLUNTEER EVENTS -->
+<div class="column is-10-desktop">
+    <div class="columns">
+        <div class="column is-12 desktop-main-fixed">
+            <section class="hero mp-purple-background">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title white-text shiftright">
+                            Upcoming Events
+                        </h1>
+                        <h2 class="subtitle is-6 white-text shiftright">
+                            View and change the events!
+                        </h2>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field has-addons shiftright-2">
+                                    <div class="control is-expanded">
+                                        <input class="input" type="text" placeholder="Filter by tag, date, keyword">
+                                    </div>
+                                    <div class="control">
+                                    <a class="button is-info">
+                                            Filter
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+</div>
+<!--This is the button to add events-->
+<div class="columns buttonrow">
+    <div class="column">
+        <button class="button is-link" onclick="openForm()">Add Event</button>
+    </div>
+</div>
+<!--This is the toggle pop-up form to add events-->
+<div class="add-event-form" id="event-form">
+    <form class="form-container">
+        <h1><b>Add Event</b></h1>
+        <hr>
+            <label for="name">Event Name</label>
+            <input type="text" placeholder="Enter event name" name="name" required>
+
+            <label for="description">Event Description</label>
+            <input type="text" placeholder="Enter event description" name="description" required>
+
+            <!--Add prompts to input date-->
+            <label for="starting-date">Event Start Time</label>
+            <input type="datetime-local" id="start-time"
+            name="start_time">
+            <br>
+            <br>
+
+            <label for="ending-date">Event End Time</label>
+            <input type="datetime-local" id="end-time"
+            name="end_time">
+            <br>
+            <br>
+
+            <label for="location">Event Primary Location</label>
+            <input type="text" placeholder="Enter event location (city, state)" name="location" required>
+    
+            <!--Add prompts for hard and soft skills-->
+
+            <button type="submit" class="btn" onclick="addEvent()">Post Event</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+    </form>
+</div>
+<div class="columns afterlistings">
+    <div class="column is-1"></div>
+    <div class="column is-2">
+        <h1 class="title is-6 has-text-centered">Event Title</h1>
+        <h2 class="subtitle has-text-centered"><b class="date">Event Date</b></h2>
+    </div>
+    <div class="vertical"></div>
+    <div class="column is-6">
+        <h1 class="title is-6">Thanksgiving Dinner</h1>
+        <h2 class="subtitle is-7">Santa Ana, CA</h2>
+        <div class="tags">
+            <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>
+            <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>
+        </div>
+        <p class="learnmore"><a>+ Learn More</a></p>
+    </div>
+    <div class="column is-2 ">
+        <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>Edit Event</b></button>
+        <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>Delete Event</b></button>
+        <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-clipboard"></i></span><b>See Volunteers</b></button>
+    </div>
+    <div class="column is-1 "></div>
+</div>
+</body>
