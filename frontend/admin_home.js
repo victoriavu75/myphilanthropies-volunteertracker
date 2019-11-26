@@ -17,6 +17,11 @@ eventObject = {
         5
     ]};
 
+//Function to send event data
+function addEvent(){
+    
+}
+    
 //Toggle the add event form
 function openForm() {
     document.getElementById("event-form").style.display = "block";

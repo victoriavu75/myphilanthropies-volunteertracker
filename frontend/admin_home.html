@@ -70,7 +70,7 @@
                             Upcoming Events
                         </h1>
                         <h2 class="subtitle is-6 white-text shiftright">
-                            Learn more and volunteer!
+                            View and change the events!
                         </h2>
                         <div class="columns">
                             <div class="column">
@@ -101,7 +101,8 @@
 <!--This is the toggle pop-up form to add events-->
 <div class="add-event-form" id="event-form">
     <form class="form-container">
-        <h1>Add Event</h1>
+        <h1><b>Add Event</b></h1>
+        <hr>
             <label for="name">Event Name</label>
             <input type="text" placeholder="Enter event name" name="name" required>
 
@@ -109,13 +110,24 @@
             <input type="text" placeholder="Enter event description" name="description" required>
 
             <!--Add prompts to input date-->
+            <label for="starting-date">Event Start Time</label>
+            <input type="datetime-local" id="start-time"
+            name="start_time">
+            <br>
+            <br>
+
+            <label for="ending-date">Event End Time</label>
+            <input type="datetime-local" id="end-time"
+            name="end_time">
+            <br>
+            <br>
 
             <label for="location">Event Primary Location</label>
             <input type="text" placeholder="Enter event location (city, state)" name="location" required>
     
             <!--Add prompts for hard and soft skills-->
 
-            <button type="submit" class="btn">Post Event</button>
+            <button type="submit" class="btn" onclick="addEvent()">Post Event</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
     </form>
 </div>
