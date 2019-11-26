@@ -5,15 +5,25 @@
 
 // Set your brand colors
 $purple: #57008b;
+$purple-light: #B362E3;
+$purple-very-light: #F7F3FA;
 $blue: #0053e2;
 $yellow: #ffbf00;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Montserrat', sans-serif;
 $primary: $purple;
-$link: $blue;  
+$link: $blue;
+$select: $purple-light;  
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+$footer-background-color: white;
+$footer-padding: -5rem;
+
+// Menu
+$menu-item-hover-background-color: $purple-very-light;
+$menu-item-hover-color: $purple;
+
 
 // Update some of Bulma's component variables
 

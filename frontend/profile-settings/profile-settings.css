@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-/* @import 'bulma'; */
-
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -111,4 +108,80 @@
 .learnmore {
     color: #0053E2;
 
+}
+
+/* Replace in line styling */
+
+/* Media */
+.profile-picture {
+    margin-bottom: 2em;
+}
+
+.nav-logo {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Attributes */
+.image-is-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticky	{
+	position: fixed;
+  	top: 0;
+}
+
+/* Layout */
+.container {
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.settings-container {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.container-heading {
+    padding-right: 2em;
+    padding-left: 2em;
+    margin-right: 2em;
+    font-size: large;
+    color: #57008b;
+    background-color: #F7F3FA;
+}
+
+.container-body {
+    padding-left: 5em;
+}
+
+/* Elements */
+.button {
+    border-color: white;
+    margin-top: .5em;
+}
+
+/* Components */
+.nav-link {
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+.info-field {
+    margin-bottom: 1em;
+}
+.input-identifier {
+    margin-right: 3em;
+}
+
+.skill {
+    border: #F7F3FA;
+}
+
+.skills-description {
+    margin-left: 1em;
 }

@@ -15,52 +15,132 @@
 
     <!--Adding in http javascript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="profile-settings.js"></script>
     <!-- <script src="../profile_home.js"></script> -->
 </head>
 
 <body>
     <div class="columns">
-        <div class="column is-2" style="padding-right: 0; position: fixed; left: 0%">
+        <div class="column vertical-navigation is-one-quarter">
             <!-- Make this div stick? -->
             <!-- Left nav bar section -->
-            <aside class="menu" style="text-align: center;">
-                <!-- Profile icon -->
-                <figure class="image is-128x128" style="margin: 4vh auto;">
-                    <img class="is-rounded" src="../images/abdul.jpeg">
-                </figure>
-                <!-- Name -->
-                <h1 style="color: black; margin: 4vh auto; font-weight: bold;">Abdul</h1>
-                <h3 style="margin-top: -15%">Volunteer</h3>
-                <!-- Volunteer or Admin-->
-                <br><br>
-                <div class="columns">
-                    <div class="column is-one-fourth"></div>
-                    <div class="column is-half">
-                        <div class="buttons btndiv">
-                            <button class="button rsvp"><span class="icon"><i class="fas fa-home"></i></span>
-                                <p><b>Home</b></p>
-                            </button>
-                            <button class="button outline is-"><span class="icon"><i class="fas fa-cog"></i></span>
-                                <p><b>Settings</b></p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="column is-one-fourth"></div>
+            <!-- Profile icon -->
+            <aside class="menu sticky has-text-centered">
+                <div class="container">
+                    <figure class="image is-128x128 image-is-centered profile-picture">
+                        <img class="is-rounded" src="../images/abdul.jpeg">
+                    </figure>
+                    <!-- Name -->
+                    <h1 class="is-uppercase has-text-weight-bold is-size-4">Abdul</h1>
+                    <h3 class="has-text-weight-light">Volunteer</h3>
                 </div>
-
-                <br>
-                <footer class="footer" style="margin: 10% 0 0 0; padding-bottom: 0%; background-color: white;">
-                    <div class="content has-text-centered">
-                        <figure class="image is-128x128" style="margin: 4vh auto; ">
-                            <img class="is-rounded" src="../images/My-Philanthropies-Logo-3.1-Square.png">
-                        </figure>
-                        <p>MyPhilanthropies</p>
-                    </div>
-                </footer>
+                <ul class="menu-list has-text-left">
+                    <li class="nav-link"><a><span class="icon"><i class="fas fa-home"></i></span>
+                        Home
+                    </a></li>
+                    <li class="nav-link"><a><span class="icon"><i class="fas fa-cog"></i></span>
+                        Settings
+                    </a></li>
+                </ul>
             </aside>
+            <!-- <footer class="footer bottom">
+                <figure class="image is-64x64 image-is-centered nav-logo">
+                    <img class="is-rounded image-is-centered" src="../images/My-Philanthropies-Logo-3.1-Square.png">
+                </figure>
+            </footer> -->
+            <!-- <footer class="footer bottom has-text-centered">
+            </footer> -->
         </div>
-        <div class="vertical2">
+        <div class="column">
+            <div id="title" class="container">
+                <h1 class="is-size-3">Abdul's Profile Page</h1>
+            </div>
+            <div id="basic-information" class="container settings-container">
+                <div class="columns container-heading">
+                    <div class="column has-text-left">
+                        <h2 class="is-uppercase">basic information</h2>
+                    </div>
+                    <div class="column has-text-right">
+                        <h2 class="icon"><i class="fas fa-edit"></i></h2>
+                    </div>
+                </div>
+                <div class="container container-body">
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Full Name</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Birth Date</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Gender</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Employment</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Transportation</span><span class="user-input">???</span></div>
+                </div>
+            </div>
+            <div id="primary-location" class="container settings-container">
+                <div class="columns container-heading">
+                    <div class="column has-text-left">
+                        <h2 class="is-uppercase">primary location</h2>
+                    </div>
+                    <div class="column has-text-right">
+                        <h2 class="icon"><i class="fas fa-edit"></i></h2>
+                    </div>
+                </div>
+                <div class="container container-body">
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Street</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">City</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">State</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Zip Code</span><span class="user-input">???</span></div>
+                </div>
+            </div>
+            <div id="contact" class="container settings-container">
+                <div class="columns container-heading">
+                    <div class="column has-text-left">
+                        <h2 class="is-uppercase">contact</h2>
+                    </div>
+                    <div class="column has-text-right">
+                        <h2 class="icon"><i class="fas fa-edit"></i></h2>
+                    </div>
+                </div>
+                <div class="container container-body">
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Email</span><span class="user-input">???</span></div>
+                    <div class="info-field"><span class="has-text-weight-bold input-identifier">Cell Number</span><span class="user-input">???</span></div>
+                </div>
+            </div>
+            <div id="skills" class="container settings-container">
+                <div class="columns container-heading">
+                    <div class="column has-text-left">
+                        <h2 class="is-uppercase">skills</h2>
+                    </div>
+                    <div class="column has-text-right">
+                        <h2 class="icon"><i class="fas fa-edit"></i></h2>
+                    </div>
+                </div>
+                <div class="columns container-body">
+                    <div class="column">
+                        <div><button id = "strong-spoken-communication" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-bullhorn"></i><span class="skills-description">strong spoken communication</span></button></div>
+                        <div><button id = "strong-written-communication" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-pencil-alt"></i><span class="skills-description">strong written communication</span></button></div>
+                        <div><button id = "web-app-development" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-laptop-code"></i><span class="skills-description">web/app development</span></button></div>
+                        <div><button id = "working-with-children" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-child"></i><span class="skills-description">working with children</span></button></div>
+                        <div><button id = "plumbing" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-wrench"></i><span class="skills-description">plumbing</span></button></div>
+                    </div>
+                    <div class="column">
+                        <div><button id = "social-media-skills" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-mobile-alt"></i><span class="skills-description">social media skills</span></button></div>
+                        <div><button id = "food-service-catering" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-cookie-bite"></i><span class="skills-description">food service/catering</span></button></div>
+                        <div><button id = "bartending" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-glass-martini-alt"></i><span class="skills-description">bartending</span></button></div>                        
+                        <div><button id = "working-with-elderly" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-luggage-cart"></i><span class="skills-description">working with elderly</span></button></div>
+                        <div><button id = "electrical" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-car-battery"></i><span class="skills-description">electrical</span></button></div>
+                    </div>
+                    
+                    <div class="column">
+                        <div><button id = "architecture" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-university"></i><span class="skills-description">architecture</span></button></div>                        
+                        <div><button id = "administrative" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-tty"></i><span class="skills-description">administrative</span></button></div>                        
+                        <div><button id = "construction" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-dolly"></i><span class="skills-description">construction</span></button></div>                        
+                        <div><button id = "working-with-animals" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-paw"></i><span class="skills-description">working with animals</span></button></div>                        
+                        <div><button id = "pr-and-marketing" class="skill select-multiple button is-capitalized is-size-7"><i class="fas fa-mail-bulk"></i><span class="skills-description">pr and marketing</span></button></div>
+                    </div>
+                </div>
+            </div>
+            <div id="save-changes-button" class="container">
+                <button></button>
+            </div>
         </div>
+
     </div>
 </body>
 </html>

@@ -3644,8 +3644,8 @@ a.list-item {
     display: block;
     padding: 0.5em 0.75em; }
     .menu-list a:hover {
-      background-color: whitesmoke;
-      color: #363636; }
+      background-color: #F7F3FA;
+      color: #57008b; }
     .menu-list a.is-active {
       background-color: #0053e2;
       color: #fff; }
@@ -6420,8 +6420,8 @@ label.panel-block {
       padding: 18rem 1.5rem; } }
 
 .footer {
-  background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem; }
+  background-color: white;
+  padding: -5rem; }
 
 .is-checkradio[type="radio"],
 .is-checkradio[type="checkbox"] {
@@ -9384,3 +9384,5 @@ input[type=range].slider {
     border-width: 0;
     opacity: 0;
     background-color: transparent; } }
+
+/*# sourceMappingURL=mystyles.css.map */
