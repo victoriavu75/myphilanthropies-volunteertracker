@@ -16,10 +16,14 @@
             font-family: 'Montserrat', sans-serif;
         }
         
-        .desktopview {
+        .desktopviewhide {
             display: none !important;
         }
 
+        .mobileviewhide{
+            display: none !important;    
+        }
+        
         .desktop-aside-fixed {
             position: fixed;
             left: 0;
@@ -132,7 +136,7 @@
 </head>
 
 <body>
-    <div class="columns desktopview">
+    <div class="columns">
         <!-- This section is for the user's profile tab -->
         <div class="column is-2-desktop desktop-aside-fixed">
             <figure class="image is-128x128 imgauto">
@@ -364,7 +368,7 @@
             <hr class="hradjust">
         </div>
     </div>
-    <div class="columns">
+    <div class="columns mobileviewhide">
         <div class="column is-one-third mp-purple-background">ONE</div>
         <div class="column is-one-third">
             
