@@ -1,3 +1,8 @@
+$(document).ready(function(){
+    //Load up event info
+    loadEvents();
+});
+
 eventObject = {
     "id": 10,
     "program": 3,
@@ -16,6 +21,39 @@ eventObject = {
         2,
         5
     ]};
+
+//Function that loads up all the events in the event database
+function loadEvents()
+{
+    var eventEndpoint = "http://ec2-3-15-201-67.us-east-2.compute.amazonaws.com/peinfo/events";
+    var x = localStorage.getItem('token');
+    return $.ajax(
+        {
+            type: "GET",
+            url: eventEndpoint,
+            dataType: 'json',
+            contentType: 'application/json; char=utf-8',
+            async:false,
+            beforeSend: function(XMLHttpRequest)
+            {
+                XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
+            },
+            complete: function(XMLHttpRequest, status)
+            {
+                //Write into the DOM using the event info
+                console.log(XMLHttpRequest.responseJSON);
+                showEventsInDOM(XMLHttpRequest.responseJSON);
+                console.log(status);
+                return status;
+            }
+        }
+    );
+}
+
+//Function that writes all the events into the HTML DOM
+function showEventsInDOM(data){
+    var HTMLWrite = "<div>"
+}
 
 //Function to send event data
 function addEvent(){

@@ -171,6 +171,7 @@ function submitPersonalInfo()
             url: personalInfoEndpoint,
             dataType: 'json',
             data: personalInfo,
+            async:false,
             beforeSend: function(XMLHttpRequest)
             {
                 XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
@@ -196,6 +197,7 @@ function submitContactInfo()
             dataType: 'json',
             data: JSON.stringify(contactInfo),
             contentType: 'application/json; char=utf-8',
+            async:false,
             beforeSend: function(XMLHttpRequest)
             {
                 XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
@@ -207,18 +209,6 @@ function submitContactInfo()
             }
         }
     );
-}
-
-//On click event, send everything and return so that you don't create multiple send requests
-function submitInformation()
-{
-    $("button").click(function(e){
-        e.preventDefault();
-        submitPersonalInfo();
-        submitContactInfo();
-        submitSkills();
-    });
-
 }
 
 //testing skills
@@ -245,6 +235,7 @@ function submitSkills()
             dataType: 'json',
             data: JSON.stringify(test),
             contentType: 'application/json; char=utf-8',
+            async:false,
             beforeSend: function(XMLHttpRequest)
             {
                 XMLHttpRequest.setRequestHeader('Authorization', "Token "+x);
@@ -256,4 +247,24 @@ function submitSkills()
             }
         }
     );
+}
+
+
+//On click event, send everything and return so that you don't create multiple send requests
+function submitInformation()
+{
+    $("button").click(function(e){
+        e.preventDefault();
+        submitPersonalInfo();
+        submitContactInfo();
+        submitSkills();
+        if (submitPersonalInfo.status && submitContactInfo.status && submitSkills.status === 'success')
+        {
+            window.location.replace("profile-home-v2.html");
+        }
+        else{
+            alert("Something went wrong on the server side. Try again later.");
+        }
+    });
+
 }
