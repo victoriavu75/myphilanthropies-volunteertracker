@@ -41,9 +41,8 @@ function loadEvents()
             complete: function(XMLHttpRequest, status)
             {
                 //Write into the DOM using the event info
-                console.log(XMLHttpRequest.responseJSON);
+                //console.log(XMLHttpRequest.responseJSON);
                 showEventsInDOM(XMLHttpRequest.responseJSON);
-                console.log(status);
                 return status;
             }
         }
@@ -52,7 +51,41 @@ function loadEvents()
 
 //Function that writes all the events into the HTML DOM
 function showEventsInDOM(data){
-    var HTMLWrite = "<div>"
+    var allEvents = data.events;
+    console.log(allEvents);
+    const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+    for(let i=0; i < allEvents.length; i++)
+    {
+        var eventName=allEvents[i].name;
+        var dateObject = new Date(allEvents[i].start_time);
+        var eventMonth = monthNames[dateObject.getUTCMonth()];
+        var eventLocation = allEvents[i].location;
+        var eventDate = eventMonth + " " + dateObject.getUTCDay() + ", " + dateObject.getUTCFullYear();
+        var HTMLWrite = '<div class="columns listingadjust">\
+        <div class="column is-1"></div>\
+        <div class="column is-2">\
+            <h1 class="title is-6 has-text-centered">'+eventMonth+'</h1>\
+            <h2 class="subtitle has-text-centered"><b class="date">'+eventDate+'</b></h2>\
+        </div>\
+        <div class="vertical"></div>\
+        <div class="column is-6">\
+            <h1 class="title is-6">'+eventName+'</h1>\
+            <h2 class="subtitle is-7">'+eventLocation+'</h2>\
+            <div class="tags">\
+                <span class="tag is-link is-light"><span class="icon"><i class="fas fa-car"></i></span>Drivers required</span>\
+                <span class="tag is-link is-light"><span class="icon"><i class="fas fa-sign-language"></i></span>ASL</span>\
+            </div>\
+            <p class="learnmore"><a>+ Learn More</a></p>\
+        </div>\
+        <div class="column is-2 ">\
+            <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-pencil-alt"></i></span><b>Edit Event</b></button>\
+            <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-trash"></i></span><b>Delete Event</b></button>\
+            <button class="button btncolor hidebtns"><span class="icon"><i class="fas fa-people-carry"></i></span><b>See Volunteers</b></button>\
+        </div>\
+        <div class="column is-1 "></div>\
+    </div>'
+        document.getElementById("eventlisting").innerHTML = HTMLWrite;
+    }
 }
 
 //Function to send event data
