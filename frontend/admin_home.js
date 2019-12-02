@@ -62,6 +62,7 @@ function showEventsInDOM(data){
         var eventMonth = monthNames[dateObject.getUTCMonth()];
         var eventLocation = allEvents[i].location;
         var eventDate = eventMonth + " " + dateObject.getUTCDay() + ", " + dateObject.getUTCFullYear();
+        //The first event listing will always have a special CSS class to is to account for the search bar
         if (i==0)
         {
             var HTMLWrite = '<div class="columns listingadjust">\
@@ -88,6 +89,7 @@ function showEventsInDOM(data){
             <div class="column is-1 "></div>\
         </div>'
         }
+        //The subsequent classes won't require that special class and have their own styling
         else{
             var HTMLWrite = '<div class="columns afterlistings">\
         <div class="column is-1"></div>\
