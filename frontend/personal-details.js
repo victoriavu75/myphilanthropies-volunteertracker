@@ -258,13 +258,7 @@ function submitInformation()
         submitPersonalInfo();
         submitContactInfo();
         submitSkills();
-        if (submitPersonalInfo.status && submitContactInfo.status && submitSkills.status === 'success')
-        {
-            window.location.replace("profile-home-v2.html");
-        }
-        else{
-            alert("Something went wrong on the server side. Try again later.");
-        }
+        window.location.replace("profile-home-v2.html");
     });
 
 }
